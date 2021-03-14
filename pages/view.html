@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CCSkinFetch</title>
+		<meta name="og:title" content="$USER$'s Skin'"/>
+		<meta name="og:description" content="View $USER$'s skin from ClassiCube'"/>
+		<style>
+			body {
+				background-color: #f2f2f2;
+				font-family: sans-serif;
+				color: #1c1c1c;
+			}
+			.space {
+				margin-bottom: 1cm;
+			}
+			.skin {
+				background-color: #ffffff;
+				border: solid;
+				float: left;
+			}
+			.float {
+				float: left;
+			}
+			.download {
+			 	border: none;
+				color: white;
+				background-color: green;
+				padding: 15px 32px;
+			 	text-align: center;
+			  	text-decoration: none;
+			  	display: inline-block;
+			  	margin: 4px 2px;
+			  	border-radius: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<h1>CCSkinFetch</h1>
+			<p class="space">Download ClassiCube skins from players</p>
+			<form action="/load" method="post">
+				<p>Type a ClassiCube username (iTs CaSe SeNsItIvE)</p><input type="text" name="username"></input>
+				<input type="submit" value="View"></input><br>
+			</form>
+		</center>
+		<img class="skin" src="http://classicube.s3.amazonaws.com/skin/$USER$.png" alt="$USER$'s Skin" width="256px" height="256px"/>
+		<h2>$USER$'s skin</h2>
+		<p>Here is a 3D head model:</p>
+		<img src="https://www.classicube.net/face/$USER$" width="64px" height="64px"/><br>
+		<a href="http://localhost:5000/view/$USER$" download><button class="download" type="button">Download</button></a>
+	</body>
+</html>
